@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Web Componets</title>
+  <link ref="favicon" href="/static/Untitled.ico">
+</head>
+<body>
+   
+  <u-u name="<script>console.log(document.cookie)</script>">
+  </u-u>
+ <script href="/app.js">
+
+ </script>
+ <script>
+  //a little fix just to make this site working
+ class Userc extends HTMLElement {
+  constructor(){
+  super();
+    this.attachShadow({mode:"open"})
+    
+    this.shadowRoot.innerHTML = `<h1>${this.getAttribute("name")}</h1>`
+  }
+}
+window.customElements.define("u-u", Userc);
+</script>
+
+</body>
+</html>
